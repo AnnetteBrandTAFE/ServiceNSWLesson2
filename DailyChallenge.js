@@ -17,17 +17,37 @@ function askQuestion(question){
 
 async function Program(){
     // Your Code Goes Here...
-    let number = ["1", "3", "5"]
-    let userInput1 = await askQuestion("Enter a number between 1-5? : ");
-if (userInput1 === "1", "3", "5"){
-    console.log("Your number has already been entered");
-} else {
-    number.push(userInput1);
-    console.log("Your number" + userInput1 + "has been entered");
-    let number1 = parseInt(userInput1);
-    let userInput2 = await askQuestion("Enter a number between 1-5? : ");
-    console.log(number)
+
+// Daily Challenge
+
+// Write a console app that takes strings from the user and adds them to an array until the user 
+// enters a duplicate entry. Then stop accepting user input and print each element in the array 
+//to the console
+
+let myArray = [];
+let shouldLoop = true;
+while(shouldLoop){
+    let userInput = await askQuestion("Please enter a number: ");
+    for(let i = 0; i < myArray.length; i++){
+        if(userInput == myArray[i]){
+            shouldLoop = false;
+        }
     }
+    if (shouldLoop) {
+        myArray.push(userInput);
+    }
+}
+
+for (let i = 0; i < myArray.length; i++) {
+    console.log(myArray[i]);
+}
+// Output:
+// Please enter a number: 1
+// Please enter a number: 2
+// Please enter a number: 1
+// 1
+// 2
+
 }
 
 Program().then(() => {

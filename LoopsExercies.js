@@ -17,27 +17,123 @@ function askQuestion(question){
 
 async function Program(){
     // Your Code Goes Here...
-// Question 1
-//for (let i = 1; i < 8; i++) {
-//    console.log(i);
-//}
-// Question 2
-//for (let i = 2; i < 9; i += 2) {
-//   console.log(i);
-//}
-// Question 3
-//let numerals = ['1', "2", "3"];
-//console.log (numerals[2] + numberals [1] + numerals[0])
-//}
+    //Loops
+    //Do the following for both for and while loops
+    
+    //For Loops
+    // Q1 Write a console app that writes the numbers from 1 to 7 to the console
 
-// Question 4
-//let students = ["Annette","Evie","Helena","Rosemary","Aunt Mary"];
-//for (let i = 0; i < students.length; i ++) {
- //if (students[i].charAt(0) === 'A') {
- //console.log(students[i]);
- //}
+    // for (let i = 1; i <= 7; i++) {
+    //     console.log(i);
+    // }
+    //Output
+    // 1
+    // 2
+    // 3
+    // 4
+    // 5
+    // 6
+    // 7
+
+    // Q2 Write a console app that writes even numbers from 2 to 8 (inclusive) to 
+    // the console (hint, you will need to not use the increment operator)
+
+    // for (let i = 2; i <= 8; i+= 2) {
+    //     console.log(i);
+    //  }
+    //  //Output
+    //  2
+    //  4
+    //  6
+    //  8
+ 
+    // Q3 Write a console app that prints the elements of an array in reverse.
+
+    // let myArray = ["Item1", "Item2", "Item3"];
+    // for (let i = myArray.length - 1; i >= 0; i--) {
+    //       console.log(myArray[i]);
+    //   }
+    // Output:
+    // Item3
+    // Item2
+    // Item1
+
+    // Q4 Write a console app that prints the elements of an array that begin with the letter a 
+    // (hint, a string is an array of characters so you can access the first character the same 
+    //way you would access the first element in an array)
+
+//     let myArray = ["Apple", "Banana", "Orange", "Andrew", "Bob", "Steve"];
+//    for (let i = 0; i < myArray.length; i++) {
+//       let currentElement = myArray[i];
+//        if(currentElement[0] == "A"){
+//            console.log(currentElement);
+//        }
+//     }
+//     Output:
+//     Apple
+//     Andrew
+
+    //While Loops
+    // Q1 Write a console app that writes the numbers from 1 to 7 to the console
+
+    // let i = 1;
+    // while(i <= 7) {
+    //     console.log(i);
+    //     i++;
+    //  }
+    // Output:
+    // 1
+    // 2
+    // 3
+    // 4
+    // 5
+    // 6
+    // 7
+
+    // Q2 Write a console app that writes even numbers from 2 to 8 (inclusive) to 
+    // the console (hint, you will need to not use the increment operator)
+
+    // let i = 2;
+    // while (i <= 8) {
+    //     console.log(i);
+    //     i += 2;
+    // }
+    // Output:
+    // 2
+    // 4
+    // 6
+    // 8
+
+    // Q3 Write a console app that prints the elements of an array in reverse.
+
+//     let myArray = ["Item1", "Item2", "Item3"];
+//     let i = myArray.length - 1;
+//      while(i >= 0){        
+// console.log(myArray[i]);
+//          i--;
+//      }
+//     Output:
+//     Item3
+//     Item2
+//     Item1
+
+    // Q4 Write a console app that prints the elements of an array that begin with the letter a 
+    // (hint, a string is an array of characters so you can access the first character the same 
+    //way you would access the first element in an array)
+
+    let myArray = ["Apple", "Banana", "Orange", "Andrew", "Bob", "Steve"];
+    let i = 0;
+     while (i < myArray.length) {
+         let currentElement = myArray[i];
+         if(currentElement[0] == "A"){
+             console.log(currentElement);
+         }
+         i++;
+     }
+    // Output:
+    // Apple
+    // Andrew
 }
-
 Program().then(() => {
     process.exit(0);
 });
